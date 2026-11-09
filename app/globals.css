@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f4f6fa;
+  --surface: #ffffff;
+  --surface-subtle: #f8fafc;
+  --foreground: #172033;
+  --muted: #657089;
+  --line: #e6eaf0;
+  --brand: #4f46e5;
+  --brand-dark: #3730a3;
+  --brand-soft: #eef2ff;
+  --success: #0f9f6e;
+  --warning: #d97706;
+  --danger: #dc2626;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--background);
+}
+
+body {
+  margin: 0;
+  color: var(--foreground);
+  background:
+    radial-gradient(circle at 92% 0%, rgba(99, 102, 241, 0.07), transparent 27rem),
+    var(--background);
+  font-family: Inter, "PingFang SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  color: #312e81;
+  background: #c7d2fe;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd2df;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.panel-shadow {
+  box-shadow: 0 1px 2px rgb(15 23 42 / 0.03), 0 12px 30px rgb(15 23 42 / 0.035);
+}
+
+.soft-grid {
+  background-image:
+    linear-gradient(to right, rgb(99 102 241 / 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(99 102 241 / 0.045) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.fade-in {
+  animation: fade-in 220ms ease-out both;
+}
+
+.slide-up {
+  animation: slide-up 260ms ease-out both;
+}
+
+.pulse-soft {
+  animation: pulse-soft 1.5s ease-in-out infinite;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

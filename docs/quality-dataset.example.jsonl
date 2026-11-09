@@ -1,0 +1,3 @@
+{"id":"qa-001","question":"产品的质保期是多久？","expected_documents":["产品手册.pdf"],"required_answer_terms":["12 个月","发票"],"expect_answerable":true}
+{"id":"qa-002","question":"如何执行交付前的验收？","expected_documents":["交付手册.docx"],"required_answer_terms":["验收清单"],"expect_answerable":true}
+{"id":"qa-003","question":"今天上证指数收盘是多少？","expected_documents":[],"required_answer_terms":[],"expect_answerable":false}
